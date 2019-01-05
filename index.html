@@ -1,0 +1,459 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	<title>JobEOS</title>
+	<meta name="description" content="JobEOS - Jacks or Better on EOS">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/jquery.flip.min.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/eosjs@16.0.7/lib/eos.min.js" integrity="sha512-PN1FGjtx9uGyhFbWFlCiM6CUsnVl68Mw//cPNhYRApYJvjcvPUzPsaoWW/zBhnR2V/r62CMTRDQf9X/nfx7oSg==" crossorigin="anonymous"></script> -->
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+	<!-- <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script> -->
+	<!-- <script src="./js/scatter.min.js"></script> -->
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="menu">
+		<nav class="navbar navbar-expand-md navbar-dark container-fluid">
+			<a href="#" class="navbar-brand"><img class="logo" src="images/logo.png" /></a>
+			<div class="nav navbar-nav">
+				<a class="nav-link" href="#">DIVIDENDS</a>
+				<a class="nav-link" href="#">COMMUNITY</a>
+				<a class="nav-link" href="#">DIVIDEDS</a>
+			</div>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+				<div class="nav navbar-nav">
+					<a class="nav-link lang-link" href="#"><img src="images/flag-cn.png" /></a>
+					<a class="nav-link lang-link" href="#"><img src="images/flag-en.png" /></a>
+					<a class="nav-link lang-link" href="#"><img src="images/flag-jp.png" /></a>
+					<a class="nav-link" href="#">HOW TO PLAY</a>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<div class="bg-top container-fluid">
+		<!-- <div class="row justify-content-md-center">
+			<div class="col-12 payout-table">
+				<div class="payout-col">
+					<div class="payout-row">
+						<div class="payout-label"></div>
+						<div class="payout-amount payout-coin">0.2 EOS</div>
+						<div class="payout-amount payout-coin">0.4 EOS</div>
+						<div class="payout-amount payout-coin">0.6 EOS</div>
+						<div class="payout-amount payout-coin">0.8 EOS</div>
+						<div class="payout-amount payout-coin">1 EOS</div>
+					</div>
+					<div class="payout-row">
+						<div class="payout-label payout-first">Royal Flush</div>
+						<div class="payout-amount payout-first">50 EOS</div>
+						<div class="payout-amount payout-first">100 EOS</div>
+						<div class="payout-amount payout-first">150 EOS</div>
+						<div class="payout-amount payout-first">200 EOS</div>
+						<div class="payout-amount payout-first" id="jackpot">250 EOS*</div>
+					</div>
+					<div class="payout-row">
+						<div class="payout-label payout-second">Straight Flush</div>
+						<div class="payout-amount payout-second">10 EOS</div>
+						<div class="payout-amount payout-second">20 EOS</div>
+						<div class="payout-amount payout-second">30 EOS</div>
+						<div class="payout-amount payout-second">40 EOS</div>
+						<div class="payout-amount payout-second">50 EOS</div>
+					</div>
+					<div class="payout-row">
+						<div class="payout-label payout-second">Four of a Kind</div>
+						<div class="payout-amount payout-second">5 EOS</div>
+						<div class="payout-amount payout-second">10 EOS</div>
+						<div class="payout-amount payout-second">15 EOS</div>
+						<div class="payout-amount payout-second">20 EOS</div>
+						<div class="payout-amount payout-second">25 EOS</div>
+					</div>
+					<div class="payout-row">
+						<div class="payout-label payout-third">Full House</div>
+						<div class="payout-amount payout-third">1.6 EOS</div>
+						<div class="payout-amount payout-third">3.2 EOS</div>
+						<div class="payout-amount payout-third">4.8 EOS</div>						
+						<div class="payout-amount payout-third">6.4 EOS</div>
+						<div class="payout-amount payout-third">8 EOS</div>
+						
+					</div>
+					<div class="payout-row">
+						<div class="payout-label payout-third">Flush</div>
+						<div class="payout-amount payout-third">1 EOS</div>
+						<div class="payout-amount payout-third">2 EOS</div>
+						<div class="payout-amount payout-third">3 EOS</div>
+						<div class="payout-amount payout-third">4 EOS</div>
+						<div class="payout-amount payout-third">5 EOS</div>
+					</div>
+					<div class="payout-row">
+						<div class="payout-label payout-third">Straight</div>
+						<div class="payout-amount payout-third">0.8 EOS</div>
+						<div class="payout-amount payout-third">1.6 EOS</div>
+						<div class="payout-amount payout-third">2.4 EOS</div>
+						<div class="payout-amount payout-third">3.2 EOS</div>
+						<div class="payout-amount payout-third">4 EOS</div>
+					</div>
+					<div class="payout-row">
+						<div class="payout-label">Three of a Kind</div>
+						<div class="payout-amount">0.6 EOS</div>
+						<div class="payout-amount">1.2 EOS</div>
+						<div class="payout-amount">1.8 EOS</div>
+						<div class="payout-amount">2.4 EOS</div>
+						<div class="payout-amount">3 EOS</div>
+					</div>
+					<div class="payout-row">
+						<div class="payout-label">Two Pairs</div>
+						<div class="payout-amount">0.4 EOS</div>
+						<div class="payout-amount">0.8 EOS</div>
+						<div class="payout-amount">1.2 EOS</div>
+						<div class="payout-amount">1.6 EOS</div>
+						<div class="payout-amount">2 EOS</div>
+					</div>
+					<div class="payout-row">
+						<div class="payout-label">Jacks or Better</div>
+						<div class="payout-amount">0.2 EOS</div>
+						<div class="payout-amount">0.4 EOS</div>
+						<div class="payout-amount">0.6 EOS</div>
+						<div class="payout-amount">0.8 EOS</div>
+						<div class="payout-amount">1 EOS</div>
+					</div>
+				</div>				
+			</div> -->
+		<!-- <div class="cards-table col-12" id="message"></div> -->
+
+
+
+
+		<!-- 内容头部 -->
+		<div class="actionTop">
+			<div class="title">- ROYAL FLUSH JACKPOT -</div>
+			<div class="marny">
+				<span class="bets">Bets Made：21，111，000</span>
+				<span class="marnyBox">
+					<b class="eos">EOS</b>
+					<b class="num">2,000</b>
+				</span>
+				<span class="total">Total Won：321，111，000</span>
+
+			</div>
+			<div class="se">Sound&Effect</div>
+			<div class="button">
+				<div class="btnOn kg"><img src="./image/buttonOn.fw.png" alt=""></div>
+				<div class="btnOff kg"><img src="./image/buttonOff.fw.png" alt=""></div>
+			</div>
+			<div class="btn">
+				<div class="btnA">ODDS</div>
+				<div class="btnL">ODDS</div>
+			</div>
+		</div>
+		<!-- 内容中部 -->
+		<div class="cards-table col-12">
+			<div class="game-card">
+				<div id="carddiv0">
+					<!-- <img class="front" src="images/back.png" /> -->
+					<img src="./images/ht1.fw.png" alt="">
+					<!-- <img onclick="holdCard(0);" id="card0" class="back card-img not-held" src="images/back.fw.png" /> -->
+					
+				</div>
+				<div id="card-hold-0" class="hold-display"><img src="images/hold.png" /></div>
+			</div>
+			<div class="game-card">
+				<div id="carddiv1">
+					<!-- <img class="front" src="images/back.png" />
+						<img onclick="holdCard(1);" id="card1" class="back card-img not-held" src="images/back.png" /> -->
+					<img src="./images/hx1.fw.png" alt="">
+				</div>
+				<div id="card-hold-1" class="hold-display"><img src="images/hold.png" /></div>
+			</div>
+			<div class="game-card">
+				<div id="carddiv2">
+					<!-- <img class="front" src="images/back.png" />
+						<img onclick="holdCard(2);" id="card2" class="back card-img not-held" src="images/back.png" /> -->
+					<img src="./images/mh1.fw.png" alt="">
+				</div>
+				<div id="card-hold-2" class="hold-display"><img src="images/hold.png" /></div>
+			</div>
+			<div class="game-card">
+				<div id="carddiv3">
+					<!-- <img class="front" src="images/back.png" />
+						<img onclick="holdCard(3);" id="card3" class="back card-img not-held" src="images/back.png" /> -->
+					<img src="./images/fk1.fw.png" alt="">
+				</div>
+				<div id="card-hold-3" class="hold-display"><img src="images/hold.png" /></div>
+			</div>
+			<div class="game-card">
+				<div id="carddiv4">
+					<!-- <img class="front" src="images/back.png" />
+						<img onclick="holdCard(4);" id="card4" class="back card-img not-held" src="images/back.png" /> -->
+					<img src="./images/back.fw.png" alt="">
+				</div>
+				<div id="card-hold-4" class="hold-display"><img src="images/hold.png" /></div>
+			</div>
+		</div>
+		<!-- 内容底部 -->
+		<div class="foak">
+			<img src="./images/foak.fw.png" alt="">
+		</div>
+		<div class="col-12" id="check-scatter">
+			No scatter detected...
+		</div>
+		<!-- <div class="col-12 wallet-eos" id="wallet-eos"><img class="eos-logo" src="images/eos-logo.png" /><span id="eos-in-wallet">0</span></div> -->
+		<!-- </div> -->
+
+		<div class="bgaction"></div>
+	</div>
+
+
+
+	<div class="controls container-fluid">
+		<div class="row justify-content-md-center">
+			<div class="col-12 controls-table">
+				<img class="controls-bg" src="images/bg-btns.png" />
+				<!-- <img class="control-btn btn-pos-center" id="login" src="images/btn-login.png" /> -->
+				<!-- <div class="controls-dialog total-dialog">
+					<img src="images/box-total.png" />
+					<div class="total-win"><span id="total-win">0</span> EOS</div>
+					<div class="total-bet"><span id="total-bet">0</span> EOS</div>
+				</div>
+				<div class="controls-dialog bet-dialog">
+					<img src="images/box-bet-amount.png" />
+					<select class="currentbet" id="currentbet" dir="rtl" onchange="updateBet()">
+						<option value="0.2">0.2</option>
+						<option value="0.4">0.4</option>
+						<option value="0.6">0.6</option>
+						<option value="0.8">0.8</option>
+						<option value="1">1</option>
+					</select>
+				</div>
+				<div class="controls-dialog hand-dialog">
+					<img src="images/box-hand.png" />
+					<select class="numhands" id="numhands" dir="rtl" onchange="setNumHands()">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+				</div>
+				<img class="control-btn play-btn btn-pos-1" id="deal-btn" src="images/btn-deal.png" />
+				<img class="control-btn play-btn btn-pos-1" id="draw-btn" src="images/btn-draw.png" />
+				<img class="control-btn play-btn btn-pos-1" id="claim-btn" src="images/btn-claim.png" />
+				<img class="control-btn play-btn btn-pos-2" id="goto-double-up-btn" src="images/btn-go-to-double.png" />
+				<img class="control-btn play-btn btn-pos-2" id="show-double-up-btn" src="images/btn-double.png" /> -->
+
+
+				<div class="actionBottom">
+					<div class="ab ab1">
+						<span>BET AMOUNT</span>
+						<div class="ab1List">
+                            <ul class="ab1Ul">
+                                <li>0.2</li>
+                                <li>0.4</li>
+                                <li>0.6</li>
+                                <li>0.8</li>
+                                <li style="border-bottom:2px solid white;">1</li>
+                            </ul>
+                        </div>
+					</div>
+					<div class="ab ab2">
+						<span>HAND</span>
+						<div class="ab2List">
+                            <ul class="ab2Ul">
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li style="border-bottom:2px solid white;">5</li>
+                            </ul>
+                        </div>
+					</div>
+					<div class="ab ab3">
+						<div class="tw">
+							<span>Total Win</span>
+							<span>4.8</span>
+						</div>
+						<div class="tb">
+							<span>Total Bet</span>
+							<span>4</span>
+						</div>
+					</div>
+					<div class="ab ab4">
+						<img src="./images/dealA.fw.png" alt="">
+						<img src="./images/dealL.fw.png" alt="">
+						<span class="deal">DEAL</span>
+					</div>
+					<div class="ab ab5">
+						<img src="./images/drawA.fw.png" alt="">
+						<img src="./images/drawL.fw.png" alt="">
+						<span class="draw">DRAW</span>
+					</div>
+					<div class="ab ab6">
+						<img src="./images/doubleA.fw.png" alt="">
+						<img src="./images/doubleL.fw.png" alt="">
+						<span class="double">DOUBLE</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<ul class="dataTitle">
+			<li style="margin-right:20%">ALL BET</li>
+			<li style="margin-right:20%">MY BET</li>
+			<li>HUGE WIN</li>
+		</ul>
+		<ul class="datas">
+			<li>
+				<table>
+					<tr>
+						<td>Time</td>
+						<td>Bettor</td>
+						<td>Result</td>
+						<td>Bet</td>
+						<td style="color:white;text-shadow: none">Payout</td>
+					</tr>
+					<tr style="background:#111">
+						<td>23:48:17</td>
+						<td>Sunny_Fucker</td>
+						<td>One pair</td>
+						<td>$1,000</td>
+						<td>$2,000</td>
+					</tr>
+					<tr>
+						<td>23:48:17</td>
+						<td>Sunny_Fucker</td>
+						<td>One pair</td>
+						<td>$1,000</td>
+						<td>$2,000</td>
+					</tr>
+					<tr style="background:#111">
+						<td>23:48:17</td>
+						<td>Sunny_Fucker</td>
+						<td>One pair</td>
+						<td>$1,000</td>
+						<td>$2,000</td>
+					</tr>
+					<tr>
+						<td>23:48:17</td>
+						<td>Sunny_Fucker</td>
+						<td>One pair</td>
+						<td>$1,000</td>
+						<td>$2,000</td>
+					</tr>
+					<tr style="background:#111">
+						<td>23:48:17</td>
+						<td>Sunny_Fucker</td>
+						<td>One pair</td>
+						<td>$1,000</td>
+						<td>$2,000</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td>Time</td>
+						<td>Bettor</td>
+						<td>Result</td>
+						<td>Bet</td>
+						<td style="color:white;text-shadow: none">Payout</td>
+					</tr>
+					<tr style="background:#111">
+						<td>23:48:17</td>
+						<td>Sunny_Fucker</td>
+						<td>Two pair</td>
+						<td>$1,000</td>
+						<td>$3,000</td>
+					</tr>
+					<tr>
+						<td>23:48:17</td>
+						<td>Sunny_Fucker</td>
+						<td>Two pair</td>
+						<td>$1,000</td>
+						<td>$3,000</td>
+					</tr>
+					<tr style="background:#111">
+						<td>23:48:17</td>
+						<td>Sunny_Fucker</td>
+						<td>Two pair</td>
+						<td>$1,000</td>
+						<td>$3,000</td>
+					</tr>
+					<tr>
+						<td>23:48:17</td>
+						<td>Sunny_Fucker</td>
+						<td>Two pair</td>
+						<td>$1,000</td>
+						<td>$3,000</td>
+					</tr>
+					<tr style="background:#111">
+						<td>23:48:17</td>
+						<td>Sunny_Fucker</td>
+						<td>Two pair</td>
+						<td>$1,000</td>
+						<td>$3,000</td>
+					</tr>
+				</table>
+			</li>
+			<li>
+				<table>
+					<tr>
+						<td>Time</td>
+						<td>Bettor</td>
+						<td>Result</td>
+						<td>Bet</td>
+						<td style="color:white;text-shadow: none">Payout</td>
+					</tr>
+					<tr style="background:#111">
+						<td>23:48:17</td>
+						<td>Sunny_Fucker</td>
+						<td>Three pair</td>
+						<td>$1,000</td>
+						<td>$4,000</td>
+					</tr>
+					<tr>
+						<td>23:48:17</td>
+						<td>Sunny_Fucker</td>
+						<td>Three pair</td>
+						<td>$1,000</td>
+						<td>$4,000</td>
+					</tr>
+					<tr style="background:#111">
+						<td>23:48:17</td>
+						<td>Sunny_Fucker</td>
+						<td>Three pair</td>
+						<td>$1,000</td>
+						<td>$4,000</td>
+					</tr>
+					<tr>
+						<td>23:48:17</td>
+						<td>Sunny_Fucker</td>
+						<td>Three pair</td>
+						<td>$1,000</td>
+						<td>$4,000</td>
+					</tr>
+					<tr style="background:#111">
+						<td>23:48:17</td>
+						<td>Sunny_Fucker</td>
+						<td>Three pair</td>
+						<td>$1,000</td>
+						<td>$4,000</td>
+					</tr>
+				</table>
+			</li>
+		</ul>
+	</div>
+</body>
+<script type="text/javascript" src="./js/index.js"></script>
+</html>

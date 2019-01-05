@@ -1,0 +1,496 @@
+body{ 	background:black; 
+		color: white;
+		font-family: Arial,Helvetica,sans-serif;
+		font-size:13px;
+		position:relative;
+		width: 100%;
+	}
+.menu{background:#025b9a;}
+.logo{width:80%; padding:3% 0px; margin-left:10%;}
+.nav-link{font-weight:bold;}
+.lang-link img{width:55%;}
+		
+.bg-top{ background: url('../images/bg-top.jpg') top left/cover; background-repeat:no-repeat; width: 100%; padding:0; min-height:300px; position: relative;}
+.bg-top .row, .controls .row{ max-width:988px; margin:auto; padding-bottom:5%;}
+.col-12{padding-left:0px; padding-right:0px;}
+
+.payout-table{background: url('../images/bg-payout.png')top left/contain; padding:20px; display:inline-block; border-radius:20px;}
+.payout-col{width:80%; margin-left:auto; margin-right:auto;}
+.payout-row{ margin-bottom:5px;}
+.payout-label{width:22.5%; display:inline-block; font-weight:bold;}
+.payout-amount{background: url('../images/box-payout.png')top center/contain; background-repeat:no-repeat; font-size:11px; text-align:center; display:inline-block; font-weight:bold; width:15%;}
+.payout-coin{background:none;}
+.payout-first{color:#edcd39;}
+.payout-second{color:#17f5fd;}
+.payout-third{color:#17fdbf;}
+
+.cards-table{width:100%; padding:0; text-align:center;z-index: 100;}
+.game-card{margin: 0 0.83%; display:inline-block;}
+.card-img{width:100%;}
+.hold-display{text-align:center; opacity:0; filter:alpha(opacity=0);}
+.hold-display img{width:50%;}
+
+
+
+.foak{
+    width: 42%;
+    height: 91px;
+    margin:auto;
+    margin-bottom: 5%;
+}
+.foak img{
+    width: 100%;
+    height:100%;
+}
+.bgaction {
+    background: url(../images/bg_action.fw.png) top left/cover; background-repeat:no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 90; }
+
+
+
+.not-held{}
+.not-current-double{opacity:0.7; filter:alpha(opacity=70);}
+
+.controls{margin-top:-4%;}
+.controls-table{width:100%;position: relative;}
+.controls-bg{width:100%;}
+.controls-dialog{display:none; position:absolute; top:20%;}
+.controls-dialog img{width:100%;}
+.total-dialog{width:27.239%; left:7%;}
+.bet-dialog{width:19.6%; left:37.239%;}
+.hand-dialog{width:11.674%; left:59.839%;}
+.currentbet{position:absolute; width:85%; padding-right:5%; height:38%; bottom:22%; left:7%; background-color:transparent; font-size:18px; font-weight:bold; color:white; border:none; -moz-appearance: none; -webkit-appearance: none;}
+.currentbet::-ms-expand {display: none;}
+.currentbet option{background-color:#025b9a;}
+.numhands{position:absolute; width:75%; padding-right:8%; height:38%; bottom:22%; left:12%; background-color:transparent; font-size:18px; font-weight:bold; color:white; border:none; -moz-appearance: none; -webkit-appearance: none;}
+.numhands::-ms-expand {display: none;}
+.numhands option{background-color:#025b9a;}
+.total-win{position:absolute; bottom:55%; right:10%; font-weight:bold;}
+.total-bet{position:absolute; bottom:17%; right:10%; font-weight:bold;}
+
+.control-btn{cursor:pointer; position:absolute; top:20%; width:7.71%;}
+.play-btn{display:none;}
+.play-btn-disabled{ opacity:0.7; filter:alpha(opacity=70);}
+.btn-pos-center{left:46.5%;}
+.btn-pos-1{left:74.513%;}
+.btn-pos-2{left:85.223%; }
+.front{position:absolute;}
+#message{text-align:center; font-size:16px; font-weight:bold; color:#ffffff; margin:10px 0px 0px 0px; min-height:24px;}
+
+#login{display:none;}
+#check-scatter{text-align:center;}
+.wallet-eos{display:none; text-align:center;}
+.eos-logo{width:1.32%; vertical-align:text-bottom; margin-right:1%;}
+
+
+
+/* 内容头部 */
+.actionTop {
+    text-align: center;
+    position: relative;
+    z-index: 105;
+    width: 100%;
+    margin-bottom: 3.5%; }
+    .actionTop .title {
+      font-size: 14px;
+      color: #FFC807;
+      text-shadow: 0 0 15px #FFC807;
+      padding-top: 22px;
+      margin-bottom: 18px; }
+    .actionTop .marny {
+      height: 65px;
+      width: 50%;
+      margin: auto; }
+      .actionTop .marny span {
+        display: block;
+        float: left; }
+      .actionTop .marny .bets {
+        width: 20%;
+        font-size: 0.8vmax;
+        color: #FFF;
+        margin: 4% 1.6% 0 0; }
+      .actionTop .marny .marnyBox {
+        width: 54%;
+        height: 100%;
+        background: url(../image/marny.fw.png) no-repeat;
+        background-size: 100% 100%;
+        position: relative; }
+        .actionTop .marny .marnyBox .eos {
+          font-size: 1.5vmax;
+          color: white;
+          text-shadow: 0 0 60px #54B3FC;
+          position: absolute;
+          left: 5%;
+          top: 15%; }
+        .actionTop .marny .marnyBox .num {
+          font-size: 1.5vmax;
+          color: #FFC807;
+          text-shadow: 0 0 60px #FFC807;
+          position: absolute;
+          right: 5%;
+          top: 15%; }
+      .actionTop .marny .total {
+        width: 20%;
+        font-size: 0.8vmax;
+        color: #FFF;
+        margin: 4% 0 0 1.8%; }
+    .actionTop .se {
+      color: #54B3FC;
+      font-size: 0.6vmax;
+      position: absolute;
+      right: 22%;
+      top: 25%; }
+    .actionTop .button {
+      position: absolute;
+      right: 15%;
+      top: 10%; }
+      .actionTop .button .btnOn {
+        display: block; }
+      .actionTop .button .btnOff {
+        display: none; }
+    .actionTop .btn {
+      width: 10%;
+      height: 44px;
+      margin: auto;
+      margin-top: 2%;
+      position: relative;
+      z-index: 105; 
+      font-size: 0.8vmax;
+      color: white;
+      font-weight: bold;}
+      .actionTop .btn .btnA {
+        height: 100%;
+        display: block;
+        width: 100%;
+        background: url(../image/btnA.fw.png)no-repeat;
+        background-size: 100% 100%;
+        position: absolute;
+        line-height: 44px;
+        left: 0;
+        top: 0; }
+      .actionTop .btn .btnL {
+        height: 100%;
+        width: 100%;
+        background:url(../image/btnL.fw.png)no-repeat;
+        background-size: 100% 100%;
+        display: none;
+        position: absolute;
+        line-height: 44px;
+        left: 0;
+        top: 0; }
+
+/* 内容底部 */
+.controls-table .actionBottom{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left:0;
+    top:0;
+}
+.controls-table .actionBottom .ab{
+    float: left;
+    font-size: 0.8vmax;
+}
+.controls-table .actionBottom .ab1 {
+    width: 18%;
+    height: 74%;
+    line-height: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:Center;
+    box-sizing: border-box;
+    border:4px solid #9F9F9F;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    margin: 1.7% 1.5% 0 5%;
+    position: relative;
+}
+.controls-table .actionBottom .ab1:hover .ab1List{
+    display: block;
+}
+.controls-table .actionBottom .ab1 .ab1List{
+    width: 80%;
+    margin-left: 10%;
+    position: absolute;
+    top:50%;
+    left: 0;
+    display: none;
+}
+.controls-table .actionBottom .ab1 .ab1List ul li{
+    display: block;
+    height:24px;
+    line-height: 24px;
+    box-sizing: border-box;
+    border:2px solid white;
+    border-bottom: none;
+    border-radius: 3px;
+    background: #0163A9;
+    text-align: right;
+    padding-right: 5%;
+    font-weight: bold;
+    position: relative;
+}
+.controls-table .actionBottom .ab2{
+    width: 10%;
+    height:74%;
+    display: flex;
+    justify-content:center;
+    align-items:Center;
+    box-sizing: border-box;
+    border:4px solid #9F9F9F;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    margin:1.7% 1.5% 0 0 ;
+    position: relative;
+}
+.controls-table .actionBottom .ab2:hover .ab2List{
+    display: block;
+}
+.controls-table .actionBottom .ab2 .ab2List{
+    width: 80%;
+    margin-left: 10%;
+    position: absolute;
+    top:50%;
+    left: 0;
+    display: none;
+}
+.controls-table .actionBottom .ab2 .ab2List ul li{
+    display: block;
+    height:24px;
+    line-height: 24px;
+    box-sizing: border-box;
+    border:2px solid white;
+    border-bottom: none;
+    border-radius: 3px;
+    background: #0163A9;
+    text-align: right;
+    padding-right: 5%;
+    font-weight: bold;
+    position: relative;
+}
+.controls-table .actionBottom .ab3{
+    width: 28%;
+    height:74%;
+    box-sizing: border-box;
+    border:4px solid #9F9F9F;
+    border-radius: 10px;
+    color: white;
+    margin: 1.7% 1.5% 0 0 ;
+}
+.controls-table .actionBottom .ab3 .tw{
+    width: 100%;
+    height:50%;
+}
+.controls-table .actionBottom .ab3 .tw span:nth-of-type(1){
+    float: left;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:Center;
+    text-align: center;
+}
+.controls-table .actionBottom .ab3 .tw span:nth-of-type(2){
+    float: left;
+    width: 70%;
+    height: 80%;
+    background: #022F5F;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    padding-right: 2%;
+    display: flex;
+    justify-content:center;
+    align-items:Center;
+    margin-top:2%;
+}
+.controls-table .actionBottom .ab3 .tb{
+    width: 100%;
+    height:50%;
+}
+.controls-table .actionBottom .ab3 .tb span:nth-of-type(1){
+    float: left;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:Center;
+    text-align: center;
+}
+.controls-table .actionBottom .ab3 .tb span:nth-of-type(2){
+    float: left;
+    width: 70%;
+    height: 80%;
+    background: #022F5F;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content:center;
+    align-items:Center;
+    margin-top:1%;
+    padding-right: 2%;
+}
+.controls-table .actionBottom .ab4,.ab5,.ab6{
+    position: relative;
+    width: 9.4%;
+    height:74%;
+    display: flex;
+    justify-content:center;
+    align-items:Center;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    margin:1.7% 1% 0 0 ;
+}
+.controls-table .actionBottom .ab4 img:nth-of-type(1){
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    display: block;
+}
+.controls-table .actionBottom .ab4 img:nth-of-type(2){
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    display: none;
+}
+.controls-table .actionBottom .ab4 .deal{
+    z-index: 106;
+}
+.controls-table .actionBottom .ab5 img:nth-of-type(1){
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    display: block;
+}
+.controls-table .actionBottom .ab5 img:nth-of-type(2){
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    display: none;
+}
+.controls-table .actionBottom .ab5 .draw{
+    z-index: 106;
+}
+.controls-table .actionBottom .ab6 img:nth-of-type(1){
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    display: block;
+}
+.controls-table .actionBottom .ab6 img:nth-of-type(2){
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    display: none;
+}
+.controls-table .actionBottom .ab6 .double{
+    z-index: 106;
+}
+
+/* 底部 */
+* {
+	margin: 0;
+	padding: 0; }
+  
+  ul li {
+	list-style: none; }
+ .footer {
+    background: #000;
+    width: 100%;
+    height: 796px;
+    color: white;
+    /* padding-top: 260px; */
+    box-sizing: border-box; }
+     .footer .dataTitle {
+      width: 40%;
+      height: 23px;
+      list-style: none;
+      margin: auto;
+      margin-bottom: 22px; }
+       .footer .dataTitle li {
+        float: left;
+        width:18.9%;
+        text-align: center;
+        font-size: 0.6vmin 0.8vmax;
+		border-bottom: 3px solid #fff;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;  }
+		.footer .dataTitle .active{
+			border-bottom-color: #0882D7;
+			color:#0882D7;
+		}
+     .footer .datas {
+      width: 70%;
+      height: 348px;
+      margin: auto; }
+       .footer .datas table {
+        width: 100%;
+        height: 100%;
+        border-collapse: collapse;
+        border-spacing: 0; }
+         .footer .datas table tr {
+          height: 60px; }
+           .footer .datas table tr td {
+            width: 20%;
+            text-align: center; }
+           .footer .datas table tr :last-child {
+            color: #0882D7;
+            text-shadow: 0 0 20px #0882D7; }
+
+
+
+
+/* 适配不同屏幕大小 */
+@media only screen and (max-width: 988px) {
+	.container-fluid{ width:auto; min-width:350px;}
+	body{font-size:2vw; padding-bottom:80px;}
+	.payout-amount{font-size:2vw;}
+	.numhands, .currentbet{font-size:2vw;}
+	.total-dialog{font-size:1.5vw;}
+	#message{font-size:1.5vw;}
+	.payout-col{width:90%;}
+	.payout-table{padding:20px 0px 20px 0px;}
+	.payout-label{width:18.5%;}
+	.game-card{ width:17.8%;}
+}
+
+@media only screen and (max-width: 768px) {
+	.game-card{ width:30%;}	
+	.controls-bg, .total-dialog,.actionTop,.actionBottom{display:none!important;}
+	.bet-dialog{width:33.32%; left:5%;}
+	.hand-dialog{width:19.846%; left:41%;}
+	.control-btn{cursor:pointer; position:absolute; top:20%; width:13.1%;}
+	.btn-pos-1{left:66.513%;}
+	.btn-pos-2{left:81.223%; }
+	.lang-link{ width:20%; float:left;}
+}
+
+@media only screen and (max-width: 600px) {
+	.payout-amount{background:none;}
+}
